@@ -1,0 +1,29 @@
+function throttle(cb, delay) {
+  let wait = false;
+  return (...args) => {
+    if (wait) {
+      return;
+    }
+    cb(...args);
+    wait = true;
+    setTimeout(() => {
+      wait = false;
+    }, delay);
+  };
+}
+
+let box = document.querySelector(".box").addEventListener(
+  "mousemove",
+  throttle(() => {
+    let div = document.createElement("div");
+    div.classList.add("imgdiv");
+    console.log(div);
+    document.body.appendChild(div);
+    // div.style.width = "380px";
+    // div.style.height = "380px";
+    // div.style.backgroundColor = "pink";
+    // div.style.borderRadius = "20px";
+    // box.innerHTML = "hello";
+    // box.appendChild(div);
+  }, 400)
+);

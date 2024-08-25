@@ -1,0 +1,127 @@
+.h-wrapper {
+  height: 10vh;
+  padding: 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 20px var(--dark-theme);
+}
+#sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 2px 2px 20px var(--dark-theme);
+  background-color: #ddd;
+  color: #000;
+}
+
+.h-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  gap: 2rem;
+}
+.h-logo {
+  color: var(--orange);
+  font-size: 3rem;
+  font-weight: 900;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+}
+
+.h-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.h-list {
+  flex: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.h-li {
+  font-size: 1.8rem;
+  display: flex;
+  text-transform: capitalize;
+  margin-left: 3rem;
+}
+.h-li.active {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--orange);
+  cursor: pointer;
+}
+.h-li:hover,
+.h-li:focus {
+  cursor: pointer;
+  color: var(--orange);
+}
+.h-btn {
+  flex: 2;
+}
+.mobile-menu {
+  display: none;
+}
+
+/* Applying CSS For Dark Mode Theme Starts*/
+#dark .h-wrapper {
+  background-color: var(--dark-theme);
+  box-shadow: 2px 2px 10px var(--white);
+}
+#dark .h-list {
+  background-color: var(--dark-theme);
+}
+#dark .h-li {
+  color: var(--white);
+}
+/* Applying CSS For Dark Mode Theme Ends*/
+
+/* Media Query Starts */
+/* for 799px */
+@media screen and (max-width: 779px) {
+  .h-wrapper {
+    height: 9vh;
+  }
+  .h-right {
+    gap: 1rem;
+  }
+  .h-li {
+    margin-left: 1.5rem;
+  }
+}
+
+/* for 599px */
+@media screen and (max-width: 599px) {
+  .mobile-menu {
+    display: initial;
+  }
+  .h-wrapper {
+    position: relative;
+  }
+  .h-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    position: absolute;
+    top: 9vh;
+    left: 100%;
+    transition: 0.8s linear;
+    background-color: #fcdca7;
+    z-index: 999;
+  }
+  .h-list.show {
+    left: 0%;
+  }
+  .h-li {
+    margin: 2rem;
+  }
+}
+/* Media Query Ends */

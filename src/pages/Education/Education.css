@@ -1,0 +1,17 @@
+.education-wrapper {
+  background-color: var(--theme-bg);
+  position: relative;
+  max-width: 95%;
+  margin: 2rem auto;
+  border-radius: 4rem;
+  padding: 1rem 0 3rem;
+  box-shadow: 5px 5px 20px #020202;
+  border: 2px solid #ccc;
+}
+
+/* Applying CSS For Dark Mode Theme Starts */
+#dark .education-wrapper {
+  box-shadow: 5px 5px 20px var(--white);
+  background-color: var(--dark-theme);
+}
+/* Applying CSS For Dark Mode Theme Ends*/

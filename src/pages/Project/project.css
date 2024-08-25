@@ -1,0 +1,141 @@
+.project-wrapper {
+  position: relative;
+  max-width: 95%;
+  margin: 2rem auto;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+.filter-btn > button {
+  padding: 1.5rem 3rem;
+}
+.project-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.project-card-detail {
+  width: 28%;
+  margin: 2rem auto;
+  padding: 1rem 0 1rem 0rem;
+  text-align: center;
+  border-radius: 2rem;
+  background: url("../../assets/images/projectbg.avif");
+  border: 6px double var(--orange);
+  box-shadow: 2px 2px 15px rgb(39, 39, 39);
+}
+
+.project-card-detail img {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  animation: pop 3s linear infinite;
+  height: 18rem;
+}
+@keyframes pop {
+  0%,
+  100% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 2px 2px 10px #eeff00;
+  }
+}
+.project-card-detail > h2 {
+  width: 100%;
+  margin: 0rem auto 0rem;
+  color: var(--orange);
+  padding: 1rem 0rem;
+  font-size: 2.5rem;
+  font-family: cursive;
+  font-weight: 900;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 0.5px;
+  text-shadow: 2px 2px #000000;
+}
+.project-card-detail > p {
+  margin: 0 auto;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  text-align: justify;
+  color: #fff;
+  padding: 0rem 1rem 1rem;
+}
+.tech {
+  width: 95%;
+  margin: 1rem auto 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tech > button > a {
+  color: var(--white);
+  font-size: 2rem;
+  margin-right: 0.4rem;
+}
+.tech > button:hover > a {
+  color: var(--orange);
+}
+
+/* Applying CSS For Dark Mode Theme starts  */
+#dark .project-card-detail {
+  border: 6px double var(--white);
+  box-shadow: 2px 0px 20px var(--white);
+}
+
+#dark .project-card-detail p {
+  color: var(--white);
+}
+
+/* Applying CSS For Dark Mode Theme Ends  */
+
+/* Media Quary Starts */
+
+/* For 999px */
+@media only screen and (max-width: 999px) {
+  .project-card-detail {
+    width: 32%;
+  }
+}
+
+/* for 799px */
+@media only screen and (max-width: 799px) {
+  .project-card-detail {
+    width: 45%;
+  }
+}
+
+/* for 599px */
+@media only screen and (max-width: 599px) {
+  .project-card-detail {
+    width: 80%;
+  }
+}
+
+/* for 399px */
+@media only screen and (max-width: 399px) {
+  .project-card-detail {
+    width: 90%;
+  }
+}
+
+/* for 299px */
+@media only screen and (max-width: 299px) {
+  .project-card-detail {
+    width: 95%;
+  }
+}
+
+/* Media Quary Ends */

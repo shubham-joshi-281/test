@@ -1,0 +1,100 @@
+.skill-wrapper {
+  position: relative;
+  max-width: 95%;
+  margin: 2rem auto;
+  padding: 3rem 0;
+}
+
+.card-container {
+  width: 100%;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  font-family: cursive;
+}
+.card-box {
+  width: 20%;
+  height: 10rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background: url("../../assets/images/cardbg.avif");
+  box-shadow: rgb(55, 158, 247) 3px 3px 6px 0px,
+    rgba(248, 56, 56, 0.5) -3px -3px 6px 1px;
+  transition: all 1s ease;
+}
+.card-box:hover {
+  transform: skewY(-4deg);
+  background-color: var(--orange);
+  color: var(--white-bg);
+  /* font-family: sans-serif; */
+  background: url("../../assets/images/caredbghover.avif");
+  box-shadow: rgba(248, 56, 56, 0.5) 3px 3px 6px 1px,
+    rgb(55, 158, 247) -3px -3px 6px 0px;
+}
+.card-detail {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 2rem;
+  justify-content: space-between;
+}
+.card-detail > :nth-of-type(1) {
+  color: var(--dark-theme);
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-family: cursive;
+}
+.card-box:hover :nth-of-type(1) {
+  color: var(--white-bg);
+}
+
+/* Applying CSS For Dark Mode Theme Starts */
+#dark .card-detail :nth-of-type(1) {
+  color: var(--orange);
+}
+#dark .card-box:hover .card-detail :nth-of-type(1) {
+  color: var(--white);
+}
+/* Applying CSS For Dark Mode Theme Ends*/
+
+/* Media Quary Starts*/
+/* for 999px */
+@media only screen and (max-width: 999px) {
+  .skill-wrapper {
+    margin: 0rem auto;
+  }
+
+  .card-box {
+    width: 27%;
+  }
+}
+
+/* for 799px */
+@media only screen and (max-width: 799px) {
+  .card-box {
+    width: 35%;
+  }
+}
+
+/* for 599px */
+@media only screen and (max-width: 599px) {
+  .card-box {
+    width: 45%;
+  }
+}
+
+/* for 399px */
+@media only screen and (max-width: 399px) {
+  .card-box {
+    width: 90%;
+  }
+}
+/* Media Quary Ends */

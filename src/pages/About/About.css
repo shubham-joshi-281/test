@@ -1,0 +1,109 @@
+.about-wrapper {
+  max-width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  margin: 4rem auto;
+}
+
+.about-left {
+  flex: 1;
+  border-right: 6px double var(--orange);
+  border-radius: 2rem;
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  padding: 1rem 2rem 1rem 0rem;
+}
+
+.about-left > :nth-child(1) {
+  display: block;
+  width: 100%;
+  padding: 2rem 0 1rem;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  font-family: cursive;
+  color: var(--orange);
+  text-transform: uppercase;
+}
+.about-left > :nth-child(2) {
+  width: 100%;
+  display: block;
+  font-size: 1.7rem;
+  font-weight: normal;
+  line-height: 3.5rem;
+  word-spacing: 0.5rem;
+  text-align: justify;
+}
+.about-right {
+  border-left: 6px double var(--orange);
+  border-radius: 2rem;
+  border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 4.5rem 0;
+}
+.progress {
+  position: relative;
+  padding: 2rem 0 0rem 0;
+  border-bottom: 6px double var(--orange);
+  border-radius: 2rem;
+}
+.progress > :nth-child(1) {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  font-size: 1.7rem;
+  padding: 3rem;
+  font-family: cursive;
+  transform: translate(-50%, -30%);
+}
+
+/* Applying CSS For Dark Mode Theme Starts */
+#dark .about-left > :nth-child(2) {
+  color: var(--white);
+}
+#dark .about-right {
+  background-color: var(--white);
+}
+/* Applying CSS For Dark Mode Theme Ends*/
+
+/* Media Query Starts */
+
+/* for 1199px */
+@media only screen and (max-width: 1199px) {
+  .about-wrapper {
+    gap: 0;
+  }
+  .about-left {
+    padding: 1rem 2rem 0rem 0rem;
+    border-radius: 1rem;
+    border-top-right-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+  }
+}
+
+/* for 599px */
+@media only screen and (max-width: 599px) {
+  .about-wrapper {
+    gap: 2rem;
+    max-width: 90%;
+    flex-direction: column;
+  }
+  .about-left {
+    padding: 2rem 0rem 0 0;
+    border: none;
+  }
+  .about-right {
+    border: none;
+    border-radius: 2rem;
+  }
+}
+/* Media Query Ends */
